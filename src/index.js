@@ -1,3 +1,10 @@
 import { fetchImg } from '../src/fetchImg';
+import { qs, qsa, searchBtn, searchInput } from './common';
 
-fetchImg('dog');
+const inputHandler = async event => {
+  event.preventDefault();
+
+  await fetchImg(searchInput.value);
+};
+
+searchBtn.addEventListener('click', inputHandler);
