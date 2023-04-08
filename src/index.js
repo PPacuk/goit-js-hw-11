@@ -13,8 +13,6 @@ const inputHandler = async event => {
 const loadingHandler = async event => {
   pageValue++;
   await fetchImg(searchInput.value);
-
-  console.log(pageValue);
 };
 
 searchBtn.addEventListener('click', inputHandler);

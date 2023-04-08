@@ -17,7 +17,8 @@ const fetchImg = async keyword => {
         'Sorry, there are no images matching your search query. Please try again.'
       );
     } else {
-      const renderImg = resp.data.hits.map(e => photoCardTemplate(e));
+      const renderImg = resp.data.hits.map(e => photoCardTemplate(e)).join('');
+
       gallery.insertAdjacentHTML('beforeend', renderImg);
     }
   } catch (error) {

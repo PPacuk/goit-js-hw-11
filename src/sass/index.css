@@ -1,0 +1,25 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #404040;
+  height: 40px;
+  gap: 20px;
+}
+
+input[type=text] {
+  border-radius: 10px;
+  height: 30px;
+  border-style: none;
+  outline-style: none;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  background-color: Gray;
+}/*# sourceMappingURL=index.css.map */

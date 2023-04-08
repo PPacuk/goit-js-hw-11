@@ -4,7 +4,7 @@ export { photoCardTemplate };
 
 const photoCardTemplate = e => {
   return `<div class="photo-card">
-  <img src="${e.webformatURL}" alt="${e.tags}" loading="lazy" />
+  <img src="${e.webformatURL}" height="200px" width="300px" alt="${e.tags}" loading="lazy" />
   <div class="info">
     <p class="info-item">
       <b>Likes: ${e.likes}</b>
@@ -20,5 +20,5 @@ const photoCardTemplate = e => {
     </p>
   </div>
 </div>
-`;
+`
 };
