@@ -7,18 +7,18 @@ const photoCardTemplate = e => {
   <img src="${e.webformatURL}" height="200px" width="300px" alt="${e.tags}" loading="lazy" />
   <div class="info">
     <p class="info-item">
-      <b>Likes: ${e.likes}</b>
+      <b>Likes:</b><span>${e.likes}</span>
     </p>
     <p class="info-item">
-      <b>Views: ${e.views}</b>
+      <b>Views:</b><span>${e.views}</span>
     </p>
     <p class="info-item">
-      <b>Comments: ${e.comments}</b>
+      <b>Comments:</b><span>${e.comments}</span>
     </p>
     <p class="info-item">
-      <b>Downloads: ${e.downloads}</b>
+      <b>Downloads:</b><span>${e.downloads}</span>
     </p>
   </div>
 </div>
-`
+`;
 };

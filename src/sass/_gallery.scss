@@ -7,3 +7,21 @@
   background-color: Gray;
   margin-top: 20px;
 }
+
+.photo-card {
+  box-shadow: 8px 3px 24px 0px rgba(66, 68, 90, 1);
+  -webkit-box-shadow: 8px 3px 24px 0px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 8px 3px 24px 0px rgba(66, 68, 90, 1);
+}
+
+.info {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}

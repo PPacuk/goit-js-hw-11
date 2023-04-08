@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { fetchImg } from '../src/fetchImg';
 import { qs, qsa, searchBtn, searchInput, loadingBtn, gallery } from './common';
 export { pageValue };
@@ -12,8 +13,15 @@ const inputHandler = async event => {
 
 const loadingHandler = async event => {
   pageValue++;
+  // if (condition) {
+    
+  // } else {
+    
+  // }
   await fetchImg(searchInput.value);
+  console.log(event);
 };
 
 searchBtn.addEventListener('click', inputHandler);
 loadingBtn.addEventListener('click', loadingHandler);
+console.log('hi');
