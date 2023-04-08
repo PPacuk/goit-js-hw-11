@@ -1,25 +1,25 @@
-button{
-    box-shadow:inset 0px 1px 0px 0px #ffffff;
-	background:linear-gradient(to bottom, #878287 5%, #dfdfdf 100%);
-	background-color:#878287;
-	border-radius:6px;
-	border:none;
-	display:inline-block;
-	cursor:pointer;
-	color:#170e17;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
+button {
+  box-shadow: inset 0px 1px 0px 0px #ffffff;
+  background: linear-gradient(to bottom, #878287 5%, #dfdfdf 100%);
+  background-color: #878287;
+  border-radius: 6px;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  color: #170e17;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
 }
 
-button:hover{
-    background:linear-gradient(to bottom, #dfdfdf 5%, #878287 100%);
-	background-color:#dfdfdf;
+button:hover {
+  background: linear-gradient(to bottom, #dfdfdf 5%, #878287 100%);
+  background-color: #dfdfdf;
 }
 
-.load-more{
-        display: flex;
-    justify-items: center;
+.load-more {
+//   display: flex;
+//   justify-items: center;
 }
