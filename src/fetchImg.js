@@ -6,6 +6,8 @@ import { Notify } from 'notiflix';
 import { photoCardTemplate } from './photoCardTemplate';
 import { pageValue } from './index';
 
+let maxHit = 0;
+
 const fetchImg = async keyword => {
   const API_KEY = '35040895-5a8e4f49ce4c30427977eed8e';
   const url = `https://pixabay.com/api/?key=${API_KEY}&q=${keyword}&image_type=photo&orientation=horizontal&safesearch=true&per_page=40&page=${pageValue}`;
@@ -13,6 +15,9 @@ const fetchImg = async keyword => {
     const resp = await axios.get(url);
     const pageNumber = resp.data.total / resp.data.hits.length;
     const roundedPageNumber = Math.round(pageNumber * 1);
+    maxHit += resp.data.hits.length;
+    console.log(maxHit);
+    console.log(resp.data.totalHits);
 
     if (searchInput.value.length === 0 || resp.data.total === 0) {
       Notify.failure(
@@ -30,7 +35,7 @@ const fetchImg = async keyword => {
       loadingBtn.style.display = 'block';
       // console.log(resp.data.totalHits);
       // console.log(resp.data.total);
-      console.log(roundedPageNumber);
+      // console.log(roundedPageNumber);
     }
   } catch (error) {
     console.error(error);

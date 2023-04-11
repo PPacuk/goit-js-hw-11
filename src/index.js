@@ -14,14 +14,14 @@ const inputHandler = async event => {
 const loadingHandler = async event => {
   pageValue++;
   // if (condition) {
-    
+
   // } else {
-    
+
   // }
   await fetchImg(searchInput.value);
-  console.log(event);
+  console.log();
 };
 
 searchBtn.addEventListener('click', inputHandler);
 loadingBtn.addEventListener('click', loadingHandler);
-console.log('hi');
+console.log();
