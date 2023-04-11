@@ -2,7 +2,19 @@
 body {
   background-color: gray;
 }
+
 .loadBtn-container {
   display: flex;
   justify-content: center;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+}
+a:visited {
+  outline: none;
+  text-decoration: none;
+  color: inherit;
 }

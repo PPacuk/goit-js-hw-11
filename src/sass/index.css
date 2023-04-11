@@ -8,6 +8,18 @@ body {
   justify-content: center;
 }
 
+a {
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+}
+
 .search-form {
   display: flex;
   justify-content: center;
@@ -39,9 +51,9 @@ input[type=text] {
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
   background-color: Gray;
-  margin-top: 20px;
+  margin: 20px auto;
 }
 
 .photo-card {

@@ -1,9 +1,9 @@
-import { qs, qsa, searchBtn, searchInput, gallery } from './common';
-
 export { photoCardTemplate };
 
 const photoCardTemplate = e => {
-  return `<div class="photo-card">
+  return `
+  <div class="photo-card">
+  <a href="${e.largeImageURL}">
   <img src="${e.webformatURL}" height="200px" width="300px" alt="${e.tags}" loading="lazy" />
   <div class="info">
     <p class="info-item">

@@ -1,36 +1,31 @@
-import axios from 'axios';
-import { fetchImg, renderImg, maxHit } from '../src/fetchImg';
-import { qs, qsa, searchBtn, searchInput, loadingBtn, gallery } from './common';
-import { Notify } from 'notiflix';
 export { pageValue };
+
+import { fetchImg } from '../src/fetchImg';
+import { renderGallery, renderNextPage} from './render';
+import {searchBtn, searchInput, loadingBtn, gallery } from './common';
+
 let pageValue = 1;
 
-const inputHandler = async event => {
+const inputHandler = event => {
   event.preventDefault();
   gallery.innerHTML = '';
   pageValue = 1;
+
   fetchImg(searchInput.value)
     .then(resp => {
-      renderImg(resp);
+      renderGallery(resp);
     })
     .catch(error => console.log(error));
 };
 
-const loadingHandler = async event => {
+const loadingHandler = event => {
   pageValue++;
   fetchImg(searchInput.value)
     .then(resp => {
-      if (maxHit <= resp.data.totalHits) {
-        renderImg(resp);
-      } else {
-        console.log(
-          "We're sorry, but you've reached the end of search results."
-        );
-      }
+      renderNextPage(resp);
     })
     .catch(error => console.log(error));
 };
 
 searchBtn.addEventListener('click', inputHandler);
 loadingBtn.addEventListener('click', loadingHandler);
-console.log();
